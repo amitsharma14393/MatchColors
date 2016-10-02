@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="colorGame">
+<head>
+  <title>Match Color - Memory Game</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css"></script>
+</head>
+<body ng-controller="colorGameController">
+
+	<!-- starts .headerFooter -->
+	<div class="headerFooter">	
+		<!-- overriding default height of bootstrap classes -->
+		<nav class="navbar navbar-inverse" style="height:100% !important;">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#" style="color:White;font-size:22px;margin-top:2%;"><strong>MatchColors </strong></a>
+				</div>	<!-- /.navbar-header -->	
+			</div><!-- /.container-fluid -->	
+		</nav><!-- /.navbar navbar-default -->	
+	</div>	<!-- /.headerFooter-->
+	
+	<!-- overriding default height of bootstrap classes -->
+	<div id="play-ground" class="container">
+		
+		<!-- starts #play-info  -->
+		<div class="row" id="play-info">
+			<div class="col-md-3">
+				<div class="col-md-8">
+					<button id="btnStartGame" class="btn btn-default btn-lg" ng-click="startGame();">Start Game</button>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col-md-6 game-info-panel">
+					Score: {{pts}} pts
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col-md-6 game-info-panel">
+					Timer: <span id="timeRemains"> 60 sec</span>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col-md-6 game-info-panel">
+					Highest-Score: {{highScore}} pts
+				</div>
+			</div>
+		</div><!-- /#play-info  -->
+		
+		<div class="row" style="background-color:#ccc;height:100%;">
+		
+			<div class="col-md-9" style="background-color:#559bb5;height:100%;">
+			
+				<!-- starts .rule-message -->
+				<div style="margin:1%;height:20%;" id="rule-message" >
+					<div class="row">
+						<div class="well">
+						<b>Instruction:</b>On click of a Start Game button, 4X4 grid will appear. By clicking on a boxes of a grid, color will fade in for that box and then you have to match the same color which is present in another box by guessing or in subsequent steps by memorizing. Always remember! It's a memory game. You will have one minute to match the colors of all boxes. Timer and score both will appear in above panel. Have fun ;)
+						</div>
+					</div>
+					
+				</div><!-- ends /.rule-message -->
+				
+				<div style="margin:3%;" id="play-zone">
+					<!-- Here content will be generated dynamically! -->
+				</div>
+			</div>
+			
+			<!-- starts .game-status -->
+			<div class="col-md-3 game-status">
+				<div class="row" id="game-msgs">
+					<!-- Here messages will come to help and tell status of game to player dynamically -->
+				</div>
+				<div class="row" id="game-score">
+					<div class="col-md-12">
+					</div>
+				</div>
+			</div><!-- end /.game-status -->
+			
+		</div><!-- /.row -->
+		
+	</div>
+	
+	<!-- core scripts used -->
+	 <script type="text/javascript" src="../js/jquery.js"></script>
+	 <script type="text/javascript" src="../css/bootstrap/js/bootstrap.min.js"></script>
+	 <script type="text/javascript" src="../js/angular.min.js"></script>
+     <script type="text/javascript" src="../js/colorGame.js"></script>
+ 
+</body>
+</html>

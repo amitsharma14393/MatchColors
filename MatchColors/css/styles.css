@@ -1,0 +1,85 @@
+/* 
+	This file contains style properties for individual and common elements of the page.
+*/
+
+html,body{
+	margin:0;
+	width:100%;
+	height:100%;
+	/*overflow:hidden;*/
+}
+.headerFooter{
+	margin:0;
+	width:100%;
+	height:10%;
+}
+
+/* style related to game-status */
+.game-status{
+	background-color:#acc5ce;
+	height:100%;
+}
+/* so that status will come slightly downward */
+#game-msgs{
+	margin-top:5px !important;
+}
+
+/* Start Game button style */
+#btnStartGame{
+	margin-top:5%;
+	width:100%;
+}
+
+/* info panel style */
+.game-info-panel{
+	font-size:18px;
+	width:100%;
+	margin-top:7%;
+}
+
+/* Following will control the style properties of grid */
+#play-ground{
+	margin-left:5%;
+	margin-right:5%;
+	background-color:#ccc;
+	width:90%;
+	height:100%;
+	display:inline-block;
+}
+
+#play-info{
+	background-color:#ccc;
+	color:black;
+	height:10%;
+}
+
+.game-info{
+	margin:0;
+	width:24%;
+	text-align:center;
+	display:inline-block;
+}
+#play-grid{
+	margin:0;
+	width:74%;
+	height:90%;
+	text-align:center;
+	display:inline-block;
+	background-color:green;
+}
+#list-top-scores{
+	margin:0;
+	width:25.5%;
+	height:90%;
+	text-align:center;
+	display:inline-block;
+	background-color:blue;
+}
+
+/* style related to box of grid */
+.grid-box{
+	background-color:white;
+	height:75px;
+	cursor:pointer;
+}
+
